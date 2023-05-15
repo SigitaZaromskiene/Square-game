@@ -13,23 +13,35 @@
     gap: 20px;
 
     .button {
-      height: 40px;
-      width: 120px;
+      height: 60px;
+      width: 160px;
       border-radius: 15px;
       border: none;
       cursor: pointer;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       font-size: 18px;
       color: white;
-
+      padding: 5px;
       &.red {
         background-color: rgb(175, 60, 60);
       }
       &.blue {
         background-color: rgb(45, 42, 139);
       }
+      &.orange {
+        background-color: rgb(211, 152, 41);
+      }
+      &.olive {
+        background-color: olive;
+      }
       &.green {
-        background-color: rgb(71, 158, 52);
+        background-color: green;
+      }
+      &.purple {
+        background-color: purple;
+      }
+      &.pink {
+        background-color: rgb(213, 123, 138);
       }
     }
   }
@@ -45,13 +57,14 @@
   }
 
   .sq {
-    display: flex;
     gap: 20px;
     height: 150px;
-    width: 150px;
+    width: 180px;
     color: black;
     border: 2px solid rgb(121, 142, 212);
     border-radius: 5px;
+    font-size: 24px;
+    padding-top: 10px;
   }
 }
 
