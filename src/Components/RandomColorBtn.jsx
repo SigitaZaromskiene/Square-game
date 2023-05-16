@@ -6,7 +6,12 @@ function RandomColorBtn({ setSq }) {
   const changeColorHandler = () => {
     setSq((sq) => [
       ...sq,
-      { color: randomColor(), id: uuidv4(), number: RandomNum(1, 999) },
+      {
+        color: randomColor(),
+        id: uuidv4(),
+        number: RandomNum(1, 999),
+        show: true,
+      },
     ]);
   };
   return (

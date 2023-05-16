@@ -5,7 +5,13 @@ function AddButton({ setSq }) {
   const addSqHandler = () => {
     setSq((sq) => [
       ...sq,
-      { id: uuidv4(), spin: false, number: RandomNum(1, 999) },
+      {
+        id: uuidv4(),
+        spin: false,
+        number: ("" + RandomNum(1, 999)).padStart(3, "0"),
+        row: sq.length,
+        show: true,
+      },
     ]);
   };
 

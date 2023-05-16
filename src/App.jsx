@@ -8,6 +8,8 @@ import Sq from "./Components/Sq";
 import ClearAllSq from "./Components/ClearAllSq";
 import SortBtn from "./Components/SortBtn";
 import StopSpinAllBtn from "./Components/StopSpinAllBtn";
+import FilterOver500 from "./Components/FilterOver500";
+import DefaultSort from "./Components/DefaultSort";
 
 function App() {
   const [sq, setSq] = useState([]);
@@ -21,11 +23,13 @@ function App() {
         <ClearAllSq setSq={setSq} />
         <SortBtn setSq={setSq} />
         <StopSpinAllBtn setSq={setSq} />
+        <FilterOver500 setSq={setSq} />
+        <DefaultSort setSq={setSq} />
       </div>
       <div className="sq-container">
-        {sq.map((sq, i) => (
-          <Sq key={uuidv4()} sq={sq} setSq={setSq} i={i} />
-        ))}
+        {sq.map((sq, i) =>
+          sq.show ? <Sq key={uuidv4()} sq={sq} setSq={setSq} i={i} /> : null
+        )}
       </div>
     </div>
   );

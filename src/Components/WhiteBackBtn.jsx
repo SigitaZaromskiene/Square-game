@@ -5,7 +5,7 @@ const WhiteBackBtn = ({ setSq }) => {
   const whiteBackHandler = () => {
     setSq((sq) => [
       ...sq,
-      { color: "#fff", id: uuidv4(), number: RandomNum(1, 999) },
+      { color: "#fff", id: uuidv4(), number: RandomNum(1, 999), show: true },
     ]);
   };
 

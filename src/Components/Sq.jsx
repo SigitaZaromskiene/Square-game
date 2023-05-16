@@ -3,7 +3,7 @@ import DelBtn from "./DelBtn";
 import SpinBtn from "./SpinBtn";
 import StopSpinBtn from "./StopSpinBtn";
 
-function Sq({ sq, setSq, i }) {
+function Sq({ sq, setSq }) {
   return (
     <div
       className={"sq " + (sq.spin ? "spin" : "")}
