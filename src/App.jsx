@@ -5,8 +5,8 @@ import AddButton from "./Components/AddButton";
 import RandomColorBtn from "./Components/RandomColorBtn";
 import WhiteBackBtn from "./Components/WhiteBackBtn";
 import Sq from "./Components/Sq";
-import RandomNumBtn from "./Components/RandomNumBtn";
 import ClearAllSq from "./Components/ClearAllSq";
+import SortBtn from "./Components/SortBtn";
 
 function App() {
   const [sq, setSq] = useState([]);
@@ -17,12 +17,12 @@ function App() {
         <AddButton setSq={setSq} />
         <RandomColorBtn setSq={setSq} />
         <WhiteBackBtn setSq={setSq} />
-        <RandomNumBtn setSq={setSq} />
         <ClearAllSq setSq={setSq} />
+        <SortBtn setSq={setSq} />
       </div>
       <div className="sq-container">
         {sq.map((sq, i) => (
-          <Sq key={uuidv4()} index={i} sq={sq} setSq={setSq} />
+          <Sq key={uuidv4()} sq={sq} setSq={setSq} i={i} />
         ))}
       </div>
     </div>

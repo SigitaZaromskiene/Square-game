@@ -2,13 +2,13 @@ import CloneBtn from "./CloneBtn";
 import DelBtn from "./DelBtn";
 import SpinBtn from "./SpinBtn";
 
-function Sq({ index, sq, setSq }) {
+function Sq({ sq, setSq, i }) {
   return (
     <div
-      className="sq"
+      className={"sq " + (sq.spin ? "spin" : "")}
       style={{ backgroundColor: sq.color, borderColor: sq.color }}
     >
-      {index}
+      {i}
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div>
           <DelBtn sq={sq} setSq={setSq} />

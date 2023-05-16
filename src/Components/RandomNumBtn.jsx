@@ -1,8 +1,8 @@
 import RandomNum from "../Functions/RandomNum";
 
-function RandomNumBtn({ setSq, index }) {
+function RandomNumBtn({ setSq, sq }) {
   const randomNumHandler = () => {
-    setSq((sq) => [...sq, { index: index % 2 ? "red" : null }]);
+    setSq((sq) => [...sq, { ...sq, id: RandomNum(1, 999) }]);
   };
   return (
     <button className="button pink" onClick={randomNumHandler}>
