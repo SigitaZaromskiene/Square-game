@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import AddButton from "./Components/AddButton";
 import RandomColorBtn from "./Components/RandomColorBtn";
 import WhiteBackBtn from "./Components/WhiteBackBtn";
-import RandomNumBtn from "./Functions/RandomNum";
 import Sq from "./Components/Sq";
+import RandomNumBtn from "./Components/RandomNumBtn";
 
 function App() {
   const [sq, setSq] = useState([]);
@@ -20,7 +20,7 @@ function App() {
       </div>
       <div className="sq-container">
         {sq.map((sq, i) => (
-          <Sq key={uuidv4()} index={i} sq={sq} />
+          <Sq key={uuidv4()} index={i} sq={sq} setSq={setSq} />
         ))}
       </div>
     </div>

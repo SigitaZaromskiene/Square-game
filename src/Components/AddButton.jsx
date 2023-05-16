@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 function AddButton({ setSq }) {
   const addSqHandler = () => {
-    setSq((sq) => [...sq, 1]);
+    setSq((sq) => [...sq, { id: uuidv4(), spin: false }]);
   };
 
   return (
