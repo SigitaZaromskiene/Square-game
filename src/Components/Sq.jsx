@@ -9,7 +9,7 @@ function Sq({ sq, setSq, i }) {
       className={"sq " + (sq.spin ? "spin" : "")}
       style={{ backgroundColor: sq.color, borderColor: sq.color }}
     >
-      {i + 1}
+      {sq.number}
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div>
           <DelBtn sq={sq} setSq={setSq} />

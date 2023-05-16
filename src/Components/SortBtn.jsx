@@ -1,6 +1,6 @@
 function SortBtn({ setSq }) {
   const sortHandler = () => {
-    setSq((s) => [...s].sort((a, b) => b - a));
+    setSq((s) => [...s].sort((a, b) => a.number - b.number));
   };
 
   return (

@@ -1,7 +1,7 @@
 function StopSpinBtn({ setSq, sq }) {
   const stopSpinHandler = () => {
     setSq((s) =>
-      s.map((s) => (s.id === sq.id ? { ...s, spin: !s.spin } : { ...s }))
+      s.map((s) => (s.id === sq.id ? { ...s, spin: !true } : { ...s }))
     );
   };
   return (
