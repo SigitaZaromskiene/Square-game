@@ -1,4 +1,4 @@
-const whiteBackBtn = ({ setSq }) => {
+const WhiteBackBtn = ({ setSq }) => {
   const whiteBackHandler = () => {
     setSq((sq) => [...sq, { color: "#fff" }]);
   };
@@ -10,4 +10,4 @@ const whiteBackBtn = ({ setSq }) => {
   );
 };
 
-export default whiteBackBtn;
+export default WhiteBackBtn;

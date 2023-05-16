@@ -1,24 +1,23 @@
-function Sq({ index, sq, setSq }) {
-  const deleteBtnHandler = () => {
-    setSq((s) => s.filter((s) => s.id !== sq.id));
-  };
+import CloneBtn from "./CloneBtn";
+import DelBtn from "./DelBtn";
+import SpinBtn from "./SpinBtn";
 
-  const spinBtnHandler = () => {
-    setSq([...sq, { spin: true }]);
-  };
+function Sq({ index, sq, setSq }) {
   return (
     <div
       className="sq"
-      style={{ backgroundColor: sq.color + "70", borderColor: sq.color }}
+      style={{ backgroundColor: sq.color, borderColor: sq.color }}
     >
       {index}
-      <div>
-        <button className="btn-small" onClick={deleteBtnHandler}>
-          Delete
-        </button>
-        <button className="btn-small spin" onClick={spinBtnHandler}>
-          Spin
-        </button>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div>
+          <DelBtn sq={sq} setSq={setSq} />
+          <CloneBtn setSq={setSq} sq={sq} />
+        </div>
+        <div>
+          <SpinBtn setSq={setSq} sq={sq} />
+          <CloneBtn setSq={setSq} sq={sq} />
+        </div>
       </div>
     </div>
   );
