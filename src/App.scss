@@ -5,12 +5,12 @@
 
   .button-container {
     width: 20%;
-    height: 100%;
-    padding: 50px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    justify-content: center;
 
     .button {
       height: 60px;
@@ -50,21 +50,20 @@
     width: 80%;
     height: 100%;
     padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .sq {
     gap: 20px;
     height: 150px;
-    width: 180px;
-    color: black;
+    color: rgb(13, 33, 101);
     border: 2px solid rgb(121, 142, 212);
     border-radius: 5px;
     font-size: 24px;
-    padding-top: 10px;
+    padding: 10px;
   }
 }
 
@@ -111,4 +110,9 @@
 
 .spin {
   animation: App-logo-spin infinite 5s linear;
+}
+
+.reverse {
+  animation: App-logo-spin infinite 5s linear;
+  animation-duration: reverse;
 }

@@ -10,7 +10,13 @@ function Sq({ sq, setSq }) {
       style={{ backgroundColor: sq.color, borderColor: sq.color }}
     >
       {sq.number}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "20px",
+        }}
+      >
         <div>
           <DelBtn sq={sq} setSq={setSq} />
           <CloneBtn setSq={setSq} sq={sq} />
