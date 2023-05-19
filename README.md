@@ -5,7 +5,7 @@ This project is for educational porpuses only.
 
 ## 🎯 Project features/goals
 
--   Learning React main principals like lifting state up, props, components
+-   Learning React main principals like lifting state up, props, components while design code and business logic is in the same component
 -   Learning SCSS
 
 # Getting Started with Create React App
