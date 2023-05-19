@@ -13,15 +13,28 @@ function Sq({ sq, setSq }) {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          gap: "5px",
           marginTop: "20px",
         }}
       >
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "15px",
+          }}
+        >
           <DelBtn sq={sq} setSq={setSq} />
           <CloneBtn setSq={setSq} sq={sq} />
         </div>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "15px",
+          }}
+        >
           <SpinBtn setSq={setSq} sq={sq} />
           <StopSpinBtn setSq={setSq} sq={sq} />
         </div>
